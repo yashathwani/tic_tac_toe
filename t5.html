@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Styling for the video */
+        #video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        /* Styling for the main container */
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 65px;
+            border-radius: 10px;
+            margin: auto;
+            max-width: 400px; /* Maximum width to maintain readability */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+        }
+
+        /* Styling for the login form */
+        #loginForm {
+            margin-top: 20px;
+        }
+
+        /* Styling for login inputs and button */
+        input[type="text"], input[type="email"], button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        /* Styling for the result container */
+        #result {
+            display: none;
+            margin-top: 20px;
+        }
+
+        /* Hover effect for the login button */
+        button:hover {
+            background-color: darkgreen; /* Dark green color on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Video background -->
+    <video autoplay muted loop id="video-bg">
+        <source src="file:///home/yash/Downloads/20392824%20(online-video-cutter.com).mp4" type="video/mp4"> <!-- Replace with your video file URL -->
+    </video>
+
+    <div class="container">
+        <h1 align="center">Login</h1>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" placeholder="Enter your mobile number" required>
+            <br>
+            <button type="button" onclick="login()"><a href="t10.html">Login</a></button>
+            
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+
+            if (email && mobile) {
+                // Perform login logic here
+                alert('Login successful!');
+            } else {
+                alert('Please enter your email and mobile number.');
+            }
+        }
+    </script>
+</body>
+</html>
+
